@@ -12,8 +12,8 @@ config :front,
 # Configures the endpoint
 config :front, FrontWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "l0QwQO6v/SAAbgPrDWy4n2Q7EITu9O7+CTsIHyW1Uw+7HJspeYynnyS8vkgl/pgB",
-  render_errors: [view: FrontWeb.ErrorView, accepts: ~w(json)],
+  secret_key_base: "CVMfnXNLM43WexalocWzZjooYmVvIiRhZhYIXrL9Q7mtz0U9wdZQtf71NeUfrDCj",
+  render_errors: [view: FrontWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Front.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

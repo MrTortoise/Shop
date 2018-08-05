@@ -11,7 +11,13 @@ config :front, FrontWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [{
+    "node", [
+      "node_modules/webpack/bin/webpack.js",
+      "--watch-stdin",
+      "--colors"
+    ]
+  }]
 
 # ## SSL Support
 #
@@ -28,6 +34,17 @@ config :front, FrontWeb.Endpoint,
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
+
+# Watch static and templates for browser reloading.
+config :front, FrontWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+      ~r{priv/gettext/.*(po)$},
+      ~r{lib/front_web/views/.*(ex)$},
+      ~r{lib/front_web/templates/.*(eex)$}
+    ]
+  ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
