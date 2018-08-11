@@ -7,14 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Front!</title>
+    <title>Hello FrontVue!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-  booo!
-
-    <%= render @view_module, @view_template, assigns %>
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-  </body>
+ <%= render @view_module, @view_template, assigns %>
+ <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+</body>
 </html>

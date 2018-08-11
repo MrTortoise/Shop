@@ -13,6 +13,8 @@ defmodule FrontWeb.Router do
     plug :accepts, ["json"]
   end
 
+
+
   scope "/", FrontWeb do
     pipe_through :browser # Use the default browser stack
 
